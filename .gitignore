@@ -1,3 +1,4 @@
 # Some generic directories
 #-------------------------
 **/.vscode
+**/node_modules
