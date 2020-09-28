@@ -1,0 +1,43 @@
+/****************************************************************************
+ * @file cdo_data.ts
+ * 
+ * This file is responsible for detailing how to load and parse the data
+ ****************************************************************************
+ * Copyright (c): 2020
+ ****************************************************************************/
+
+/**
+ * Interface defining data associated with a CDO
+ */
+interface cdo {
+    agency: {
+        name: string;
+        abbrv: string;
+        image: string;
+        data: string;
+        website: string;
+    },
+    name: {
+        first: string;
+        last: string;
+    },
+    contact: {
+        website: string;
+        email: string;
+        linkedin: string;
+    }
+};
+
+
+/**
+ * Helper function for loading CDO data from properly formatted JSON file
+ * @param database_url URL where JSON database file can be loaded
+ */
+async function getCdoDatabase(database_url: string): Promise<cdo[]> {
+    // Load the database file
+    let data_json = await fetch(database_url)
+                            .then(response => {return response.json()});
+    let cdoDatabase:cdo[] = data_json.data;
+
+    return cdoDatabase;
+};
