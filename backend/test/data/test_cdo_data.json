@@ -1,0 +1,39 @@
+{
+    "description": "JSON database of US Government CDOs",
+    "data": [
+    {
+        "agency": {
+            "name": "National Aeronautics and Space Administration",
+            "abbrv": "NASA",
+            "website": "https://www.nasa.gov/",
+            "data": "https://www.nasa.gov/data/",
+            "image": "https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg"
+        },
+        "name": {
+            "first": "Cdo0_First",
+            "last": "Cdo0_Last"
+        },
+        "contact": {
+            "website": "https://www.nasa.gov/data",
+            "email": "first.last@email.gov",
+            "linkedIn": ""
+        }
+    },{
+        "agency": {
+            "name": "Securities and Exchange Commission",
+            "abbrv": "SEC",
+            "website": "https://www.sec.gov/",
+            "data": "https://www.sec.gov/data/",
+            "image": "https://www.sec.gov/files/sec-logo.png"
+        },
+        "name": {
+            "first": "Cdo1_First",
+            "last": "Cdo1_Last"
+        },
+        "contact": {
+            "website": "https://www.sec.gov/data",
+            "email": "first.last@email.gov",
+            "linkedIn": ""
+        }
+    }]
+}

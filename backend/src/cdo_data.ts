@@ -3,7 +3,7 @@
  * 
  * This file is responsible for detailing how to load and parse the data
  ****************************************************************************
- * Copyright (c): 2020
+ * Copyright (c): 2020 Peregrine Advisors
  ****************************************************************************/
 
 /**
