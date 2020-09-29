@@ -9,11 +9,17 @@ In order to build the code, `npm` will need to be installed. Then, from the 'bac
 ```
 > npm run compile
 ```
+The compiled JavaScript will be output to the `backend/dist` directory.
+
 ## Testing
 In order to test the code, `npm` and `node` need to be installed. 
-1. Compile the code (see [Compiling](#compiling) above). 
+1. Compile the code for testing:
+   ```
+   > npm run compile:test
+   ```
 2. Start the 'test' server by running the following command:
    ```
-   node dist/index.js
+   node dist/test/index.js
    ```
+   This server will be responsible for "serving" our test data files to our webpage. In this way we can test whether our scripts are actually able to fetch and process the data that we are expecting to use in our portal.
 3. In a browser load the `backend/test/test.html` file. It should show values based on the tests that have been implemented.

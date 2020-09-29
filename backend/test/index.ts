@@ -7,32 +7,26 @@ var url  = require('url');
 /**
  * Fetches the test_cdo_data.json file
  */
-function getJsonData(data_url:string) {
-    let json_content: string = '';
-
-    fs.readFile(data_url, function (err: NodeJS.ErrnoException, json: string) {
-        if (err) {
-            throw err;
-        }
-        json_content = json;
-    });
-
-    return json_content;
+function getJsonData(data_url:string): string {
+    return fs.readFileSync(data_url, 'utf8');
 }
 
 /**
  * Initiate a server to allow testing the various components
  */
 http.createServer(function (req: IncomingMessage, res: ServerResponse) {
-    res.writeHead(200, { 'Content-Type': 'text/html' });
+    
     res.setHeader("Access-Control-Allow-Origin", "*");
+    res.writeHead(200, { 'Content-Type': 'text/html' });
     
     // Figure out which endpoint file we want
-    var request_url = url.parse(req.url);
+    let request_url = url.parse(req.url);
+
+    // Return data based on the endpoint
     switch (request_url.path) {
         // Serve up the cdo test datasets
         case "/cdo_data.json":
-            res.end(getJsonData('test/test_cdo_data.json'));
+            res.end(getJsonData('test/data/test_cdo_data.json'));
             break;
         default:
             res.end('{}');

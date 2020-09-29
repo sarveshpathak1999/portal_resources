@@ -1,14 +1,12 @@
 {
-    "name": "peregrineportal",
+    "name": "peregrineportal_test",
     "version": "0.0.1",
-    "description": "Classes used for parsing data used in our website portal.",
-    "main": "",
+    "description": "Testing resources for CDO portal",
+    "main": "../dist/test/index.js",
     "author": "Josh Cardenzana",
     "license": "ISC",
     "scripts": {
         "compile": "tsc -b",
-        "build": "tsc -b",
-        "compile:test": "npm run compile && cd test && npm run compile && cd ../;",
         "watch": "tsc -b -w"
     },
     "devDependencies": {
