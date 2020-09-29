@@ -2,7 +2,7 @@
     "name": "peregrineportal",
     "version": "0.0.1",
     "description": "Classes used for parsing data used in our website portal.",
-    "main": "dist/index.js",
+    "main": "",
     "author": "Josh Cardenzana",
     "license": "ISC",
     "scripts": {
