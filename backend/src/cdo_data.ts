@@ -25,7 +25,8 @@ interface cdo {
         website: string;
         email: string;
         linkedin: string;
-    }
+    },
+    acting?:boolean;
 };
 
 
