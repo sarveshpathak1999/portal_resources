@@ -14,6 +14,7 @@ interface cdo {
         name: string;
         abbrv: string;
         image: string;
+        ocdo: string;
         data: string;
         website: string;
     },
@@ -22,10 +23,10 @@ interface cdo {
         last: string;
     },
     contact: {
-        website: string;
         email: string;
         linkedin: string;
-    }
+    },
+    acting?:boolean;
 };
 
 
